@@ -1,0 +1,19 @@
+{
+  "name": "inputtoview",
+  "version": "1.0.0",
+  "description": "浏览器兼容性，虚拟键盘遮挡输入框的问题",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangzai92/InputToView.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangzai92/InputToView/issues"
+  },
+  "homepage": "https://github.com/liangzai92/InputToView#readme"
+}
