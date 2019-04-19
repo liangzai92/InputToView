@@ -4,14 +4,6 @@ function getIOSVersion(ua) {
   return match ? match[1].replace(/_/g, ".") : "unknown";
 }
 
-function isIphoneX() {
-  // 判断是否是iphonex
-  return (
-    /iphone/gi.test(navigator.userAgent) &&
-    (screen.height == 812 && screen.width == 375)
-  );
-}
-
 class InputToView {
   constructor(input, { delay = 300, interval = 300 } = {}) {
     this.input =
@@ -20,7 +12,6 @@ class InputToView {
         : document.querySelector(input);
 
     this.isSpecVersion = this.checkVersion();
-    this.isIphoneX = isIphoneX();
 
     this.delay = delay;
     this.interval = interval;
@@ -36,7 +27,7 @@ class InputToView {
   }
 
   onFocus() {
-    if (this.isSpecVersion || this.isIphoneX) {
+    if (this.isSpecVersion) {
       // ios11.0-11.3 对scrollTop及scrolIntoView解释有bug
       // 直接执行会导致输入框滚到底部被遮挡
     } else {
