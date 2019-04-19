@@ -58,8 +58,6 @@ class InputToView {
     } else {
       target.scrollIntoView(true);
     }
-
-    document.body.scrollTop = document.body.scrollHeight;
   }
 
   clearSrcoll() {
